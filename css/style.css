@@ -76,19 +76,124 @@ body {
 .input-section .input-group .input-group-text {
   background-color: #fbbd23;
 }
+
+/* foods/meals area with api */
 .food-section {
-  max-width: 70%;
-  margin: 30px auto 30px;
+  max-width: 100%;
+  margin: 30px 20px;
 }
 .food-section h2 {
   max-width: 100%;
   text-align: center;
 }
-.food-section .ood-area {
-  max-width: 60%;
+.food-section .meals-area {
+  width: 100%;
   margin: 30px auto 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
+  row-gap: 15px;
+}
+.food-section .meals-area .recipes {
+  width: 290px;
+  height: 370px;
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+}
+.food-section .meals-area .recipes img {
+  width: 290px;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+.food-section .meals-area .recipes h2 {
+  text-align: left;
+  font-size: 20px;
+  margin: 10px 10px;
+}
+.food-section .meals-area .recipes p {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.food-section .meals-area .recipes button {
+  background: #fbbd23;
+  border: none;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  top: 323px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.food-section .meals-area .recipes button:hover {
+  background-color: rgb(211, 152, 2);
+  transform: scale(1.05);
+}
+
+/* modals area */
+
+.recipesmodal-area {
+  width: 600px;
+  display: none;
+  border-radius: 20px 20px;
+  position: fixed;
+  top: 20px;
+  left: 26%;
+  z-index: 999;
+  box-shadow: -1px -1px 96px -23px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: -1px -1px 96px -23px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: -1px -1px 96px -23px rgba(0, 0, 0, 0.52);
+}
+.recipesmodal-area .recipesDetails {
+  width: 600px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 20px 20px;
+  position: relative;
+}
+.recipesmodal-area .recipesDetails img {
+  width: 530px;
+  height: 250px;
+  display: inline-block;
+  position: relative;
+  left: 5.5%;
+  top: 10px;
+  border-radius: 20px 20px 0 0;
+}
+.recipesmodal-area .recipesDetails h2 {
+  text-align: left;
+  font-size: 20px;
+  margin: 20px 10px 0 33px;
+}
+.recipesmodal-area .recipesDetails p {
+  text-align: left;
+  margin-left: 33px;
+  margin-right: 20px;
+  font-size: 8px;
+}
+.recipesmodal-area .recipesDetails button {
+  background: #fbbd23;
+  border: none;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  top: 445px;
+  right: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.recipesmodal-area .recipesDetails button:hover {
+  background-color: rgb(211, 152, 2);
+  transform: scale(1.05);
 }
