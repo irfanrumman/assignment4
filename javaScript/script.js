@@ -7,6 +7,9 @@ const recipesModal = document.querySelector(".recipesmodal-area");
 const inputBox = document.querySelector(".form-control");
 const searchBtn = document.querySelector(".searchbtn");
 
+// backToTopArrow variable
+const backToTopArrow = document.querySelector(".backtotopbtn-area");
+
 // fetching funtion
 async function getMeals(inputValue = "") {
   spinner.style.display = "block";
@@ -52,18 +55,35 @@ async function getMeals(inputValue = "") {
 }
 getMeals();
 
-// search event
+// search addEvent
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault;
   const inputValue = inputBox.value.trim();
   getMeals(inputValue);
 });
 
-// Enter key press event
+// Enter key press addEvent
 inputBox.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault;
     const inputValue = inputBox.value.trim();
     getMeals(inputValue);
   }
+});
+
+// backToTopArrow addEvent
+window.addEventListener("scroll", (e) => {
+  console.log(e);
+  if (window.scrollY > 250) {
+    backToTopArrow.style.display = "flex";
+  } else {
+    backToTopArrow.style.display = "none";
+  }
+});
+// click to top scroll
+backToTopArrow.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

@@ -237,3 +237,31 @@ body {
   background-color: rgb(211, 152, 2);
   transform: scale(1.05);
 }
+
+/* backtotopbtn area */
+.backtotop-section .backtotopbtn-area {
+  width: 30px;
+  height: 30px;
+  background-color: #0d9f9c;
+  border: 4px solid #020bbe;
+  border-radius: 50%;
+  position: fixed;
+  top: 460px;
+  right: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.03s, transform 0.2s;
+  display: none;
+}
+
+.backtotop-section .backtotopbtn-area:hover {
+  background-color: #c40000;
+  transform: scale(1.05);
+}
+
+.backtotop-section .backtotopbtn-area .bi-arrow-up-short {
+  font-size: 23px;
+  color: #ffffff;
+}
