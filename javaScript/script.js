@@ -73,11 +73,13 @@ inputBox.addEventListener("keypress", (e) => {
 
 // backToTopArrow addEvent
 window.addEventListener("scroll", (e) => {
-  console.log(e);
-  if (window.scrollY > 250) {
-    backToTopArrow.style.display = "flex";
-  } else {
-    backToTopArrow.style.display = "none";
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 991.98) {
+    if (window.scrollY > 250) {
+      backToTopArrow.style.display = "flex";
+    } else {
+      backToTopArrow.style.display = "none";
+    }
   }
 });
 // click to top scroll

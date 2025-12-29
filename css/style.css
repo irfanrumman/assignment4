@@ -8,11 +8,12 @@ body {
   height: 100vh;
   background-color: aliceblue;
 }
+
 /* header area */
+
 .header-section .header-area {
   width: 70%;
   margin: 0 auto;
-  /* padding: 30px 0; */
 }
 .header-section .header-area img {
   width: 150px;
@@ -86,7 +87,32 @@ body {
   color: #ffffff;
 }
 
+/* resposive hero area  */
+
+@media screen and (max-width: 575px) {
+  .hero-section .heroarea h1 {
+    font-size: 35px;
+  }
+  .hero-section .heroarea p {
+    max-width: 400px;
+    font-size: 15px;
+  }
+  .input-section {
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-section .heroarea h1 {
+    font-size: 20px;
+  }
+  .hero-section .heroarea p {
+    max-width: 400px;
+    font-size: 11px;
+  }
+}
+
 /* foods/meals area with api */
+
 .food-section {
   max-width: 100%;
   margin: 10px 20px;
@@ -154,6 +180,42 @@ body {
   transform: scale(1.05);
 }
 
+/* reposive food section */
+
+@media screen and (max-width: 1250px) {
+  .food-section .meals-area {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .food-section .meals-area .recipes {
+    width: 31%;
+  }
+  .food-section .meals-area .recipes img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .food-section .meals-area {
+    row-gap: 25px;
+  }
+  .food-section .meals-area .recipes {
+    width: 31%;
+  }
+  .food-section .meals-area .recipes img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .food-section .meals-area .recipes {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .food-section .meals-area .recipes {
+    width: 90%;
+  }
+}
+
 /* loading snipper area */
 #spinner {
   border: 4px solid #f3f3f3;
@@ -181,7 +243,7 @@ body {
 
 /* modals area */
 
-.recipesmodal-area {
+.modal-section .recipesmodal-area {
   width: 600px;
   display: none;
   border-radius: 20px 20px;
@@ -193,14 +255,14 @@ body {
   -webkit-box-shadow: -1px -1px 96px -23px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: -1px -1px 96px -23px rgba(0, 0, 0, 0.52);
 }
-.recipesmodal-area .recipesDetails {
+.modal-section .recipesmodal-area .recipesDetails {
   width: 600px;
   height: 500px;
   background: #ffffff;
   border-radius: 20px 20px;
   position: relative;
 }
-.recipesmodal-area .recipesDetails img {
+.modal-section .recipesmodal-area .recipesDetails img {
   width: 530px;
   height: 250px;
   display: inline-block;
@@ -209,18 +271,18 @@ body {
   top: 10px;
   border-radius: 20px 20px 0 0;
 }
-.recipesmodal-area .recipesDetails h2 {
+.modal-section .recipesmodal-area .recipesDetails h2 {
   text-align: left;
   font-size: 20px;
   margin: 20px 10px 0 33px;
 }
-.recipesmodal-area .recipesDetails p {
+.modal-section .recipesmodal-area .recipesDetails p {
   text-align: left;
   margin-left: 33px;
   margin-right: 20px;
   font-size: 8px;
 }
-.recipesmodal-area .recipesDetails button {
+.modal-section .recipesmodal-area .recipesDetails button {
   background: #fbbd23;
   border: none;
   color: #ffffff;
@@ -233,12 +295,78 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
-.recipesmodal-area .recipesDetails button:hover {
+.modal-section .recipesmodal-area .recipesDetails button:hover {
   background-color: rgb(211, 152, 2);
   transform: scale(1.05);
 }
 
+/* responsive modal area */
+@media screen and (max-width: 991.98px) {
+  .modal-section .recipesmodal-area {
+    width: 500px;
+    top: 25px;
+    left: 20%;
+  }
+  .modal-section .recipesmodal-area .recipesDetails {
+    width: 500px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails img {
+    width: 430px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal-section .recipesmodal-area {
+    width: 400px;
+    top: 25px;
+    left: 20%;
+  }
+  .modal-section .recipesmodal-area .recipesDetails {
+    width: 400px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails img {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .modal-section .recipesmodal-area {
+    width: 350px;
+    left: 15%;
+  }
+  .modal-section .recipesmodal-area .recipesDetails {
+    width: 350px;
+    height: 600px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails img {
+    width: 330px;
+    left: 2.5%;
+  }
+  .modal-section .recipesmodal-area .recipesDetails h2 {
+    font-size: 15px;
+    margin: 20px 5px 5px 10px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails p {
+    margin-left: 10px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails button {
+    top: 550px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal-section .recipesmodal-area {
+    width: 300px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails {
+    width: 300px;
+  }
+  .modal-section .recipesmodal-area .recipesDetails img {
+    width: 300px;
+    left: 0;
+    top: 0;
+  }
+}
+
 /* backtotopbtn area */
+
 .backtotop-section .backtotopbtn-area {
   width: 30px;
   height: 30px;
