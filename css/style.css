@@ -364,6 +364,11 @@ body {
     top: 0;
   }
 }
+@media screen and (max-width: 380px) {
+  .modal-section .recipesmodal-area {
+    left: 7%;
+  }
+}
 
 /* backtotopbtn area */
 
